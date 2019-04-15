@@ -1,0 +1,1149 @@
+/*---------------------------------------------------------------------
+            THE COFFEE SHOP FICTIONAL WEBSITE CSS STYLE FILE
+---------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------
+                        MOBILE DEFAULT STYLES - GLOBAL STYLES
+---------------------------------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix: after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+img, video {
+    width: 100%;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+
+@font-face {
+    font-family: '28_days';
+    src: url(../optimisedFonts/28_days_later-webfont.eot);
+    src: url(../optimisedFonts/28_days_later-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../optimisedFonts/28_days_later-webfont.woff2) format('woff2'),
+         url(../optimisedFonts/28_days_later-webfont.woff) format('woff'),
+         url(../optimisedFonts/28_days_later-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+
+
+
+/*---------------------------------------------------------------------
+                        THE HOME STYLES
+---------------------------------------------------------------------*/ 
+
+
+
+.container5 .chevron5 div{
+   position: relative;
+}
+.container5 {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+
+
+.chevron5 {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron5:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron5:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron5:before,
+.chevron5:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: black;
+}
+
+.chevron5:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron5:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.ml9 {
+  position: relative;
+  top: 240px;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+
+
+
+.homeBgImage {
+    position: relative;
+    background-image: url(../img/coffeenewbg2.jpg); 
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-bottom: 15px white;
+    background-attachment: fixed;
+}
+
+.logoC {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 45px;
+    z-index: 110;
+    position: fixed;
+}
+
+.cartIcon {
+    position: absolute;
+    top: 15px;
+    left: 45vw;
+    width: 45px;
+    z-index: 115;
+    position: fixed;
+}
+
+.fa-shopping-basket {
+    font-size: 2em;
+    color: white;
+}
+
+.navC {
+    color: black;
+    top: 0%;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    border-bottom: 2px solid rgba(194, 166, 255, 0.2);
+    z-index: 100;
+}
+
+ul.menu-items {
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li a, nav li {
+    color: white;    
+    opacity: 1;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    float: none;
+    display: block;
+    outline-style: none !important;
+    text-decoration: none;
+    }
+    
+    
+
+    .navBtn  {
+        font-size: 2.5em;
+        display: block;
+        width: 20%;
+        margin: 0 4vw 0 73vw; 
+        padding: 7px 3%;
+        text-align: center;
+        cursor: pointer;
+        background-color: white;
+    }
+    
+    .menu-items a {
+        
+        padding: 15px 5vw 15px 0;
+        color: white;
+        text-align: right;
+    }
+    
+    .menu-items li {
+        
+        border-top: 3px solid black;
+    }
+
+
+.menu-items, .viewCart, .shoppingB, .hand {
+        
+        display: none; 
+       
+    }
+
+.mainHeading {
+    font-family: 'Lovers Quarrel', cursive, sans-serif;
+    letter-spacing: 3px;
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: center;
+    display: block;
+    margin: 40vh auto 0 auto;
+    color: rgba(255, 255, 255, 1);
+ }
+
+.actionB a {
+
+    z-index: 50;
+    text-decoration: none;
+}
+
+
+
+
+
+.newCoffeeB {  
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    margin: 2vh auto 15vh auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: black;
+    cursor: pointer;
+    outline: none;
+    
+
+    
+}
+
+
+
+
+.productsBtn {
+color: transparent !important;
+text-transform: uppercase;
+background: transparent;
+padding: 20px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+}
+.productsBtn:hover {
+
+}
+
+
+
+/*---------------------------------------------------------------------
+            FEATURED PRODUCTS AND SALES STYLES
+---------------------------------------------------------------------*/
+
+h1 {
+    
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Ek Mukta', sans-serif;
+    font-weight: lighter;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    font-family: 'Ek Mukta', sans-serif;
+    font-weight: lighter;
+}
+
+
+
+p {
+    padding: 0 10px;
+    text-align: center;
+}
+
+
+.productBox {
+    margin: 1%;
+    width: 220px;
+    text-align: center;
+    
+
+}
+
+.productBox a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    cursor: pointer!important;
+    overflow: hidden !important;
+}
+
+figure {
+    cursor: pointer;
+    margin: 0;
+}
+
+.pDetail {  
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+figcaption > strong.price {
+    display: block;
+}
+
+.addToCart {  
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    margin: 2vh auto 15vh auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: #60a3bc;
+    outline: none;
+}
+
+.addToCart:hover{
+   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+border-radius: 50px;
+
+transition: all 0.5s ease 0s;
+}
+   
+}
+
+.holdingC {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: auto;
+}
+
+.deliveryO {
+    text-align: center;
+    /*width: 87.5%;*/
+    padding: 30px 5% 30px 5%;
+    border: 1px solid #ccc;
+}
+
+.login, .register1 {
+    color: white;
+    font-size: 0.8em;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 16px;
+    border: none;
+    background-color: #60a3bc;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+
+
+/*---------------------------------------------------------------------
+            CONTACT FORM AND FOOTER STYLES
+---------------------------------------------------------------------*/
+
+.containerFlex {
+
+    background: lightgray;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 10px 0 0 0;
+
+}
+
+.contactT {
+    color: black;
+    text-align: center;
+}
+
+.contactD {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ourAddress {  
+    font-size: 1em;
+    line-height: 2em;
+    color: black;
+}
+
+.smLogo {
+    font-size: 2em;
+    margin: 2% 3% 0 3%;
+    color: #60a3bc;
+ 
+}
+
+.iconsContact {
+    font-size: 1em;
+    margin: 1%;
+    color: white;
+
+}
+
+
+.contactD {
+    display: flex;
+    flex-direction: column;
+}
+
+.telMob {
+    order: -1;
+}
+
+.contactD a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    background-color: gray;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+
+
+.formContainer {
+    width: 100%; 
+    height: auto; 
+    margin-top: 25px;
+}
+
+.formC {
+    color: white;
+    width: 100%;
+    margin: 0 auto 100px auto;
+    display: block;
+  
+}
+
+.userPass {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.inputFields {
+    border: none;
+    background: white;
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: 30px;
+    color: black;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 0 5%;
+}
+
+.inputMessage {
+    border: none;
+    border-radius: 3px;
+    background: white;
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: auto;
+    color: black;
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 20px 5%;
+}
+
+.sendB {
+    font-size: 1em;
+    color: white;
+    line-height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: gray;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+
+  #map {
+    width: 100%;
+    opacity: 0.8;  
+    height: 450px; 
+    box-shadow:  0 4px 8px 0;
+}
+
+.socialMedia {
+    
+  
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+
+}
+
+.footerD {
+    font-size: 0.8em;
+    color: black;
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    display: block;
+}
+
+footer {  
+    background-color: white;
+    clear: both;
+    margin: 0 auto;
+}
+
+#BetterLogo img {
+max-width: 100%;
+height: auto !important;
+}
+
+/*---------------------------------------------------------------------
+                       MODAL STYLES
+---------------------------------------------------------------------*/
+
+
+.modal {
+    color: black;
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 65px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+
+.close {
+    position: absolute;
+    top: 0px;
+    left: 830px;
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 100;
+    text-shadow: 2px 1px black;  
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    } 
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    }
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+/*---------------------------------------------------------------------
+                        FORM 
+---------------------------------------------------------------------*/
+
+.theForm {
+    margin: 30px;
+    height: 280px;
+    overflow: auto;
+}
+
+.theFormL {
+    width: 40%;
+    height: 100%;
+    margin: 0 10% 0 5%;
+    float: left;
+}
+
+.theFormR {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.theFormR input, .theFormL input {
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid black;
+    height: 30px;
+    color: black;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+
+.allCoffee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+        
+    }
+
+
+
+
+
+
+.logoC:hover {
+    animation-name: wobble;
+}
+
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+
+/*---------------------------------------------------------------------
+                 MOBILE STYLES - 150 - 568+ SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+@media screen and (min-width: 150px) {
+     
+.menu-items li {
+        border-top: none;
+        border-color: white;
+        display: inline;
+    }
+
+     .menu-items a {
+        
+        padding: 15px 13vw 15px 0;
+        color: black;
+        text-align: right;
+    }
+    .pDetail {
+        padding: 0;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .slogan {
+        padding: 100px 4vw 0 0;
+        align-content: center;
+    }
+    .mainHeading {
+        margin: 0;
+        padding: 30px 4vw 0 0;
+        text-align: right;
+    }
+    .newCoffeeB {
+        margin-right: 4vw;
+        margin-bottom: 0vw;
+    }
+    .homeBgImage {
+        height: 100vh;
+    }
+            .logoC {
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 1.4vh;
+        left: 5vw;
+        z-index: 999;
+    }
+    
+}
+
+@media screen and (min-width: 568px) {
+
+
+     .menu-items li {
+        border-top: none; 
+        display: inline;
+        
+    }
+    .menu-items a {
+        
+        padding: 15px 13vw 15px 0;
+        color: black;
+        text-align: right;
+    }
+    .pDetail {
+        padding: 0;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .slogan {
+        padding: 100px 4vw 0 0;
+        align-content: center;
+    }
+    .mainHeading {
+        margin: 0;
+        padding: 30px 4vw 0 0;
+        text-align: right;
+    }
+    .newCoffeeB {
+        margin-right: 4vw;
+        margin-bottom: 0vw;
+    }
+    .homeBgImage {
+        height: 100vh;
+    }
+    
+            .logoC {
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 1.4vh;
+        left: 5vw;
+        z-index: 999;
+    }
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+                 TABLET STYLES - 768 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 768px) {
+      
+    .menu-items a {
+        
+        padding: 15px 13vw 15px 0;
+        color: black;
+        text-align: right;
+    }
+    .pDetail {
+        padding: 0;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .mainHeading {
+        margin: 0;
+        padding: 30px 4vw 0 0;
+        text-align: right;
+    }
+    .newCoffeeB {
+        margin-right: 4vw;
+        margin-bottom: 0vw;
+    }
+    .homeBgImage {
+        height: 100vh;
+    }
+
+     .menu-items li {
+        border-top: none; 
+        
+        display: inline;
+        
+    }
+        .logoC {
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 1.4vh;
+        left: 5vw;
+        z-index: 999;
+    }
+
+}
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1024 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {
+    
+    
+    .menu-items a{
+        color: black;
+        height: 20px;
+        font-size: 16px;
+        font-weight: 600
+    }
+
+	.cartIcon, .navBtn {
+        display: none;
+        
+    }
+    
+    .menu-items, .viewCart, .hand, .textSales {
+        
+        display: inline;
+    }
+    .container {
+        width: 80%;
+    }
+    .homeBgImage {
+        height: 100vh;  
+    }
+.logoC {
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 1.4vh;
+        left: 5vw;
+        z-index: 999;
+    }
+    .fa-shopping-basket {
+        font-size: 1.5em;
+        color: black;
+        
+    }
+    
+
+    
+    .navC {
+        background-color: white;
+        border-bottom: none;
+        text-align: right;
+        padding: 20px 0;
+        top: 0%;
+    }
+    
+    nav a {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: lighter;
+        transition: all 0.5s ease;
+    }
+    nav a:hover {
+        color: #60A3BC;
+    }
+    
+    .menu-items a {
+        padding: 0 20px;
+        margin: 0 5px;
+        text-align: center;
+        width: 10%;
+        display: inline;
+    }
+    
+    .menu-items li {
+        border-top: none;
+        display: inline;
+    }
+    .actionB {
+        position: absolute;
+        top: 80vh;
+       right: 43vw; 
+        
+    }
+    .mainHeading {
+        position: absolute;
+        top: 65vh;
+        left: 3vw;
+    }
+    .slogan {
+        font-size: 3em;
+        position: absolute;
+        top: 35vh;
+        left: 8vw;
+     }
+    .hand {
+        position: absolute;
+        top: 77vh;
+        left: 15vw;
+        color: rgb(53, 38, 80);
+        margin: 0 0 0 20px !important;
+    }
+
+
+    @-webkit-keyframes handPointer {
+                                    0%{left:15%;} 
+                                    50%{left:22%;}     
+                                    100%{left:15%;}
+                                    }
+
+    @keyframes handPointer {
+                            0%{left:15%;} 
+                            50%{left:22%;}     
+                            100%{left:15%;}
+                            }
+    .holdingC {
+        width: 100%;
+        height: 100% !important;
+        margin: 0 auto;
+        padding: 20px 30px;
+        overflow: auto;
+    }
+    .shoppingB {
+        width: 100%;
+        margin: 20px 0 30px 0;
+        border: 1px solid #ccc;
+        height: auto;
+        padding: 20px 0 50px 0;
+        display: block;
+    }
+
+    .shoppingText {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .holdingC {
+        width: 100%;
+        height: 100% !important;
+        margin: 0 auto;
+        padding: 20px 30px;
+        overflow: auto;
+}
+
+    .aboutText p {
+        font-size: 0.9em;
+        text-align: justify;
+        line-height: normal;
+    }
+    .contactD {
+        text-align: left;
+        width: 36.3%;
+        float: left;
+        height: 288px;
+        margin-top: 8px;
+    }
+    .formContainer {
+        width: 60%;
+        float: left;
+        height: auto;
+        margin-top: 25px;
+    }
+    .sendB:hover {
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: #60a3bc;
+    }
+    .inputFields:focus, .inputMessage:focus {
+        /*box-shadow: inset 0 1px 1px rgba(255,255,255,.075);*/
+        -webkit-box-shadow: inset 0 1px 1px rgb(43, 30, 59), 0 0 8px rgb(212, 210, 208);
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+        background-color: red;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+   
+    .telMob {
+        order: 0;
+    }
+
+}
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1280 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1280px) {
+    
+    
+     a[href$=“.com”] {
+	  color: blue;
+}
+    
+    a[href^=“tel”] {
+	  color: blue;
+}
+
+
+
+    
+    figure:hover + figcaption {
+
+    }
+    
+
+}
+
+
+
+
+
+ a[href$=“.com”] { 
+    color: red !important; 
+}
+
+
+
+
+
+
+
+
